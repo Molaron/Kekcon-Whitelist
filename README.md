@@ -19,6 +19,12 @@
 - Angabe von Admin-GUID's in der Config.
 - Angabe eines Kick-Grunds in der Config.
 
+### inGame-Befehle
+- !whitelist on        `Aktiviert die Whitelist`
+- !whitelist off       `Deaktiviert die Whitelist`
+- !whitelist reload    `Lädt die Konfiguration neu`
+- !whitelist status    `Gibt den Status der Whitelist an`
+
 ### Konfiguration
 
 Konfig-Pfad: `plugins/config/whitelist.cfg`
