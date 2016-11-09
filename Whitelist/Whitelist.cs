@@ -133,7 +133,7 @@ namespace Whitelist
 
                 string players = args.Message.Substring(114);
 
-                Regex playerregexsub = new Regex("([0-256])...[0-9.:]+........[-0-9]+...([a-z0-9]+)\\(.+\\).([^\\s]+)");
+                Regex playerregexsub = new Regex("(\\d+)\\s+\\b\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}:\\d+\\b\\s+-?\\d+\\s+([0-9a-fA-F]+)\\(\\w+\\)\\s([\\S ]+)");
                 Match playermatchsub = playerregexsub.Match(players);
 
                 while (playermatchsub.Success)
@@ -247,7 +247,7 @@ namespace Whitelist
         {
             Regex regex = new Regex("Player #([0-9]{1,}) (.*) - GUID: (.*)");
             Match match = regex.Match(args.Message);
-            Regex commandregex = new Regex("\\G\\(.[a-z]+\\) (.[^\\s]+): !([^\\s]+) ?(.*)");
+            Regex commandregex = new Regex("\\G\\(.[a-z]+\\) (.*): !([^\\s]+) ?(.*)");
             Match commandmatch = commandregex.Match(args.Message, 0);
 
             if(commandmatch.Success)
